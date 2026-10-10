@@ -1,0 +1,4 @@
+.env
+config/monitor.conf
+logs/
+.DS_Store
