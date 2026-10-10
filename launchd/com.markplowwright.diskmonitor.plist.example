@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Replace /ABSOLUTE/PATH/TO/... and REPLACE_WITH_SLACK_WEBHOOK_URL before loading. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.markplowwright.diskmonitor</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/ABSOLUTE/PATH/TO/disk_monitor.sh</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>900</integer>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>DISK_PATH</key>
+    <string>/System/Volumes/Data</string>
+    <key>DISK_THRESHOLD</key>
+    <string>85</string>
+    <key>COOLDOWN_MIN</key>
+    <string>240</string>
+    <key>SLACK_WEBHOOK_URL</key>
+    <string>REPLACE_WITH_SLACK_WEBHOOK_URL</string>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/ABSOLUTE/PATH/TO/logs/disk-monitor.log</string>
+  <key>StandardErrorPath</key>
+  <string>/ABSOLUTE/PATH/TO/logs/disk-monitor.err</string>
+</dict>
+</plist>

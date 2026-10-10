@@ -1,0 +1,4 @@
+# disk-usage-monitor: every 15 minutes.
+# Replace /ABSOLUTE/PATH/TO/disk_monitor.sh and REPLACE_WITH_SLACK_WEBHOOK_URL
+# before installing. Do not commit a real webhook URL.
+*/15 * * * * DISK_PATH=/ DISK_THRESHOLD=85 COOLDOWN_MIN=240 SLACK_WEBHOOK_URL='REPLACE_WITH_SLACK_WEBHOOK_URL' /ABSOLUTE/PATH/TO/disk_monitor.sh
